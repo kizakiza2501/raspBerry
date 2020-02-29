@@ -1,0 +1,6 @@
+version: '3'
+services:
+    testContainer:
+        image: test
+        container_name: testContainer
+        restart: always
