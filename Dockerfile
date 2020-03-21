@@ -21,3 +21,5 @@ RUN pip3 install tensorflow==1.14.0
 RUN pip3 install keras
 RUN pip3 install flask flask_cors -U
 RUN pip3 install opencv_python
+
+RUN pip3 install python-picamera
