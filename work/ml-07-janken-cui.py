@@ -35,7 +35,7 @@ Jprev_set = np.array([Jprev])
 jnow_set = np.array([j])
 
 # ３層ニューラルネットワークの定義
-clf = MLPClassifier(hidden_layer_size=(200, ), random_state=None)
+clf = MLPClassifier(hidden_layer_sizes=(200, ), random_state=None)
 
 # ランダムな入力でオンライン学習を1回行う
 # classesは、あり得るターゲットを指定する
