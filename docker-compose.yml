@@ -2,5 +2,8 @@ version: '3'
 services:
     testContainer:
         image: test
-        container_name: testContainer
+        container_name: testContainer2
+        build: ./
         restart: always
+        volumes: 
+            - ./work:/tmp/work
