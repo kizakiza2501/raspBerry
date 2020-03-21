@@ -73,10 +73,21 @@ try:
         # 人間の手を予測しているため、グーならパー、チョキならグー、パーならチョキへ変換する
         comp_choice = (jpredict[0] + 2) % 3
 
+        # 人間の手とコンピュータの手を画面に表示
+        print('あなた:' + janken_class[your_choice] + ', コンピューター:' + janken_class[comp_choice])
+
+        # 勝敗結果を更新
+        if your_choice == comp_choice:
+            draw += 1
+        elif your_choice == (comp_choice + 1) % 3:
+            lose += 1
+        else:
+            win += 1
+
         # 勝敗結果を表示
         print('あなたの勝ち： {0}、負け：{1}、あいこ：{2}'.format(win, lose, draw))
 
-        # 過去の手（入力データ）と現在の手（ターゲット）でインライン学習
+        # 過去の手（入力データ）と現在の手（ターゲット）でオンライン学習
         clf.partial_fit(Jprev_set, jnow_set)
 
         # 過去の手の末尾に現在のコンピュータの手を追加
