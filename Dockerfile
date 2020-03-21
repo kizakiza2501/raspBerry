@@ -22,4 +22,4 @@ RUN pip3 install keras
 RUN pip3 install flask flask_cors -U
 RUN pip3 install opencv_python
 
-RUN pip3 install python-picamera
+RUN pip3 install python3-picamera
