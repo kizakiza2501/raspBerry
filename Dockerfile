@@ -8,6 +8,7 @@ RUN apt install -y libhdf5-dev libqtwebkit4 libqt4-test libatlas-base-dev libjas
 
 RUN apt install python3-dev -y
 RUN apt install python3-pip -y
+RUN apt install python3-picamera -y
 
 RUN pip3 install pip -U
 RUN pip3 install setuptools -U
@@ -23,4 +24,5 @@ RUN pip3 install keras
 RUN pip3 install flask flask_cors -U
 RUN pip3 install opencv_python
 
-RUN apt install python3-picamera -y
+RUN apt-get update
+RUN apt-get install python-picamera python3-picamera -y
