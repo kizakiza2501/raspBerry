@@ -26,3 +26,4 @@ RUN pip3 install opencv_python
 
 RUN apt-get update
 RUN apt-get install python-picamera python3-picamera -y
+RUN apt-get install python-opencv -y
