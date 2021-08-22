@@ -7,3 +7,6 @@ services:
         restart: always
         volumes: 
             - ./work:/tmp/work
+        privileged: true
+        stdin_open: true
+        tty: true
