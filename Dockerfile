@@ -24,7 +24,9 @@ RUN pip3 install tensorflow==1.14.0
 RUN pip3 install keras
 RUN pip3 install flask flask_cors -U
 RUN pip3 install opencv_python
+RUN pip3 install google-api-python-client
 
 RUN apt-get update
 RUN apt-get install python-picamera python3-picamera -y
 RUN apt-get install python-opencv -y
+RUN apt-get install libraspberrypi-bin -y
