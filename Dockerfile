@@ -1,4 +1,5 @@
-FROM raspbian/stretch
+# FROM raspbian/stretch
+FROM sdhibit/rpi-raspbian
 USER root
 
 RUN apt update
